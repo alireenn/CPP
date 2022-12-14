@@ -6,7 +6,7 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:11:34 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 17:55:18 by alice            ###   ########.fr       */
+/*   Updated: 2022/12/14 19:03:41 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ void    Contact::init(void)
     this->_firstName = this->_getInput("Enter you first name: ");
     this->_lastName = this->_getInput("Enter your last name: ");
     this->_nickname = this->_getInput("Enter your nickname: ");
-    this->_nickname = this->_getInput("Enter your phone number: ");
-    this->_nickname = this->_getInput("Enter your darkest secret: ");
+    this->_phoneNumber = this->_getInput("Enter your phone number: ");
+    this->_darkestSecret = this->_getInput("Enter your darkest secret: ");
     std::cout << std::endl;
 }
 
@@ -66,10 +66,10 @@ void    Contact::view(int index) const
 {
     if (this->_firstName.empty() || this->_lastName.empty() || this->_nickname.empty())
         return ;
-    std::cout << index << std::flush;
-    std::cout << this->_printLen(this->_firstName) << std::flush;
-    std::cout << this->_printLen(this->_lastName) << std::flush;
-    std::cout << this->_printLen(this->_nickname) << std::flush;
+    std::cout << index << " " << std::flush;
+    std::cout << this->_printLen(this->_firstName) << " " << std::flush;
+    std::cout << this->_printLen(this->_lastName) << " " << std::flush;
+    std::cout << this->_printLen(this->_nickname) << " " << std::flush;
     std::cout << std::endl;
 }
 
