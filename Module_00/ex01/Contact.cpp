@@ -6,11 +6,20 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:11:34 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 17:40:36 by alice            ###   ########.fr       */
+/*   Updated: 2022/12/14 17:55:18 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+
+Contact::Contact()
+{
+}
+
+Contact::~Contact()
+{
+}
+
 
 std::string Contact::_getInput(std::string str) const //ritorna una stringa
 {

@@ -6,11 +6,20 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:11:39 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 17:45:37 by alice            ###   ########.fr       */
+/*   Updated: 2022/12/14 17:56:09 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+PhoneBook::PhoneBook()
+{
+}
+
+PhoneBook::~PhoneBook()
+{
+}
+
 
 void PhoneBook::welcome(void)
 {
@@ -29,6 +38,15 @@ void    PhoneBook::addContact(void)
     this->_contacts[i % 8].init(); //i contatti sono 8
     this->_contacts[i % 8].setIndex(i % 8);
     i++;
+}
+
+void    PhoneBook::printContacts(void)
+{
+    std::cout << " PHONEBOOK CONTACTS " << std::endl;
+    for (size_t i = 0; i < 8; i++) {
+        this->_contacts[i].view(i);
+    }
+    std::cout << std::endl;
 }
 
 int	PhoneBook::_readInput()

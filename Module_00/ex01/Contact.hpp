@@ -6,7 +6,7 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:10:55 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 17:47:06 by alice            ###   ########.fr       */
+/*   Updated: 2022/12/14 17:55:29 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ class Contact
         std::string _getInput(std::string str) const;
 
     public:
+        Contact();
+        ~Contact();
         void    init(void);
         void    view(int index) const;
         void    display(int index) const;
