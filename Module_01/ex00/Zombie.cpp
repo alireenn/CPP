@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Account.cpp                                        :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 18:23:39 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 19:27:26 by alice            ###   ########.fr       */
+/*   Created: 2022/12/19 16:43:17 by alice             #+#    #+#             */
+/*   Updated: 2022/12/19 18:21:26 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Account.hpp"
-#include <ctime>
-#include <iostream>
-#include <iomanip>
+#include "Zombie.hpp"
 
-int Account::_nbAccounts = 0;
-int Account::_totalAmount= 0;
-int Account::_totalNbDeposits= 0;
-int Account::_totalNbWithdrawals = 0;
+Zombie::Zombie(std::string name):_name(name)
+{
+}
+
+Zombie::~Zombie()
+{
+    std::cout << this->_name << " is dead" << std::endl;
+}
+
+void Zombie::announce(void)
+{
+    std::cout << this->_name << ":  BraiiiiiiinnnzzzZ..." << std::endl; 
+}
