@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 18:15:19 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 13:25:27 by alice            ###   ########.fr       */
+/*   Created: 2022/12/20 13:33:39 by alice             #+#    #+#             */
+/*   Updated: 2022/12/20 13:33:44 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-Zombie *zombieHorde(int n, std::string name)
+int main( void )
 {
-    Zombie *ciccio = new Zombie[n];
-    for (int i = 0; i < n; i++)
-        ciccio[i].setName(name);
-    return (ciccio);
+    std::string str = "HI THIS IS BRAIN";
+    std::string *stringPTR = &str;
+    std::string &stringREF = str;
+
+    std::cout << &str << ": " << str << std::endl;
+    std::cout << stringPTR << ": " << *stringPTR << std::endl;
+    std::cout << &stringREF << ": " << stringREF << std::endl;
+
+    return 0;
 }

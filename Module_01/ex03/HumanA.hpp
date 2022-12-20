@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 18:15:19 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 13:25:27 by alice            ###   ########.fr       */
+/*   Created: 2022/12/20 16:15:45 by alice             #+#    #+#             */
+/*   Updated: 2022/12/20 16:17:23 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie *zombieHorde(int n, std::string name)
+class HumanA
 {
-    Zombie *ciccio = new Zombie[n];
-    for (int i = 0; i < n; i++)
-        ciccio[i].setName(name);
-    return (ciccio);
-}
+    private:
+        std::string _name;
+        Weapon      &_weapon;
+        HumanA();               //costruttore di copie
+
+    public:
+        HumanA( std::string name, Weapon& weapon );
+        ~HumanA();
+
+        void    attack( void ) const;
+};

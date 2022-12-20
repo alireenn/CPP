@@ -5,29 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 18:10:02 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 12:51:07 by alice            ###   ########.fr       */
+/*   Created: 2022/12/20 16:29:42 by alice             #+#    #+#             */
+/*   Updated: 2022/12/20 16:40:03 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main(void)
 {
-    int n;
-    int i = 0;
-    std::string name;
+        Weapon club = Weapon("Gun");
+        HumanA Ray("Ray", club);
+        Ray.attack();
+        club.setType("Some other type of weapon");
+        Ray.attack();
 
-    std::cout << "How many zombies do you want to create? ";
-    std::cin >> n;
-    std::cout << std::endl;
-    std::cout << "Tell me the name: ";
-    std::cin >> name;
-    std::cout << std::endl;
-    Zombie *Nzombie = zombieHorde(n, name);
-    for (int i = 0; i < n; i++)
-        Nzombie[i].announce();
-    delete[] Nzombie;
-    return (0);
-    
+        Weapon club = Weapon("Beauty");
+        HumanB Wisp("Wisp");
+        Wisp.setWeapon(club);
+        Wisp.attack();
+        club.setType("some other weapons");
+        Wisp.attack();
 }

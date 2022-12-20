@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 18:15:19 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 13:25:27 by alice            ###   ########.fr       */
+/*   Created: 2022/12/20 16:17:40 by alice             #+#    #+#             */
+/*   Updated: 2022/12/20 16:21:39 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie *zombieHorde(int n, std::string name)
+HumanA::HumanA( std::string name, Weapon& weapon ) : _name(name), _weapon(weapon)
 {
-    Zombie *ciccio = new Zombie[n];
-    for (int i = 0; i < n; i++)
-        ciccio[i].setName(name);
-    return (ciccio);
+}
+
+HumanA::~HumanA()
+{
+}
+
+void    HumanA::attack( void ) const
+{
+    if (this->_weapon.getType() != "")
+        std::cout << _name << " attacks with their " << this->_weapon.getType() << std::endl;
+    else
+        std::cout << _name << " doesn't have a weapon to attack." << std::endl;
 }
