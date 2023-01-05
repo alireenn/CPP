@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:11:39 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 19:15:12 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/05 16:40:32 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ int	PhoneBook::_readInput()
 
 	do //un ciclo lo fa a prescindere
 	{
-		std::cout << "Enter Index: " << std::flush; // Metaforicamente dopo aver riempito la cassetta del cesso,
-        // si deve tirare lo sciacquone. Questo è il significato della parola "flush". Alcuni dicono "svuotare il buffer"
+		std::cout << "Enter Index: " << std::flush; //" Alcuni dicono "svuotare il buffer"
 		std::cin >> input;
+        if (std::cin.eof())
+            return (0);
 		if (std::cin.good() && input >= 0) //good controlla se sono state settate flag di errore
 			valid = true;
 		else

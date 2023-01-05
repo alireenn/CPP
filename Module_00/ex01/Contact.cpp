@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 13:11:34 by alice             #+#    #+#             */
-/*   Updated: 2022/12/14 19:03:41 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/05 16:29:41 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,14 @@ Contact::~Contact()
 std::string Contact::_getInput(std::string str) const //ritorna una stringa
 {
     std::string input = "";
+    std::string ret = "";
     bool        valid = false;
     do
     {
         std::cout << str << std::flush;
         std::getline(std::cin, input); 
+        if (std::cin.eof())
+            return (ret);
         if (std::cin.good() && !input.empty())
             valid = true;
         else {
