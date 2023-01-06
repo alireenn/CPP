@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 18:10:02 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 12:51:07 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/06 16:41:54 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main(void)
 {
     int n;
-    int i = 0;
     std::string name;
 
     std::cout << "How many zombies do you want to create? ";

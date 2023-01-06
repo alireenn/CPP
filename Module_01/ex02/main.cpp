@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 13:33:39 by alice             #+#    #+#             */
-/*   Updated: 2022/12/20 13:33:44 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/06 16:46:11 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main( void )
+int main(void)
 {
     std::string str = "HI THIS IS BRAIN";
     std::string *stringPTR = &str;
@@ -21,6 +21,9 @@ int main( void )
     std::cout << &str << ": " << str << std::endl;
     std::cout << stringPTR << ": " << *stringPTR << std::endl;
     std::cout << &stringREF << ": " << stringREF << std::endl;
+
+    std::cout << str << std::endl;
+    
 
     return 0;
 }
