@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 16:58:11 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/06 16:07:56 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/06 18:05:26 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ std::string openFile(std::string path)
         ret += buf;
         file.close();
     }
-    std::cout << ret << std::endl;
     return(ret);
 }
 
@@ -46,9 +45,8 @@ std::string ft_replace(std::string file, std::string fromThis, std::string toThi
     std::string buf;
     int i = -1;
 
-    while (++i < file.size())
+    while (++i < (int)file.size())
     {
-        std::cout << i << std::endl;
         if  (file[i] == fromThis[0])
         {
             buf = file.substr(i, fromThis.size());

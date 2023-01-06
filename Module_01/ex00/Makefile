@@ -25,7 +25,7 @@ BOLDWHITE   =   "\033[1m\033[37m"
 $(NAME): $(OBJ)
 		@echo "\033[1m\033[37mCompilation...\033[37m"
 		@$(CC) $(FLAGS) -o $(NAME) $(OBJ)
-		@echo "\033[1m\033[32mReady ---> CPP 01 - ex01\033[37m"
+		@echo "\033[1m\033[32mReady ---> CPP 01 - ex00\033[37m"
 fclean: clean
 	@printf "removing program executable $(NAME)\n\033[0;37m"
 	$(RM) $(NAME)

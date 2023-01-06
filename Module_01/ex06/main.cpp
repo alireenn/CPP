@@ -6,13 +6,13 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:48:06 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/06 16:26:00 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/06 17:59:16 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main(int ac, char **av)
+int main()
 {
     std::string level;
     Harl harl;

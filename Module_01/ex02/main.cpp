@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/20 13:33:39 by alice             #+#    #+#             */
-/*   Updated: 2023/01/06 16:46:11 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/06 17:49:20 by anovelli          #+#    #+#             */
+/*   Updated: 2023/01/06 18:01:36 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(void)
+int	main(void)
 {
-    std::string str = "HI THIS IS BRAIN";
-    std::string *stringPTR = &str;
-    std::string &stringREF = str;
+	std::string	str = "HI THIS IS BRAIN";
+	std::string	*ptr;
+	std::string &ref = str;
 
-    std::cout << &str << ": " << str << std::endl;
-    std::cout << stringPTR << ": " << *stringPTR << std::endl;
-    std::cout << &stringREF << ": " << stringREF << std::endl;
+	ptr = &str;
+	std::cout << &str << std::endl;
+	std::cout << &ptr << std::endl;
+	std::cout << &ref << std::endl << std::endl;
 
-    std::cout << str << std::endl;
-    
-
-    return 0;
+	std::cout << str << std::endl;
+	std::cout << *ptr << std::endl;
+	std::cout << ref << std::endl;
 }

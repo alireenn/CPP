@@ -1,4 +1,4 @@
-NAME    =   Hi\ /This\ /Is\ /Brain
+NAME    =   HiThisIsBrain
 SRC     =   $(wildcard *.cpp)
 OBJ     =   $(SRC:%.cpp = %.o)
 CC      =   c++
