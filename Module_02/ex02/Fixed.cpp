@@ -6,7 +6,7 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 17:39:04 by alice             #+#    #+#             */
-/*   Updated: 2023/01/08 18:07:01 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/08 18:24:01 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Fixed::Fixed(const int n): _fixedPointValue( n << _raw_bit){
     Lo spostamento di n a sinistra di _raw_bit bit moltiplica effettivamente n per il valore di 2 elevato alla potenza 
     di _raw_bit, che è il fattore di conversione da intero a virgola fissa.*/
 }
+
+Fixed::Fixed(const float n): _fixedPointValue(roundf(n *(1 << _raw_bit))){}
 
 Fixed::Fixed(const Fixed &rhs){
 	*this = rhs;

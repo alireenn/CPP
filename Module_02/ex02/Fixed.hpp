@@ -6,7 +6,7 @@
 /*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:51:27 by alice             #+#    #+#             */
-/*   Updated: 2023/01/08 18:17:18 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/08 18:25:02 by alice            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
