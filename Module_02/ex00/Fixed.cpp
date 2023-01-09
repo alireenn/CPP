@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:38:43 by alice             #+#    #+#             */
-/*   Updated: 2023/01/08 16:45:04 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/09 12:36:36 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Fixed &Fixed::operator=(const Fixed &rhs)
 	if(this != &rhs)
 		this->_fixedValue = rhs.getRawBits();
 	/*Questo è l'operatore di assegnazione di 
-	copia per una classe chiamata Fixed. */
+	copia */
 	return *this;
 }
 

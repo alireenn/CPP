@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alice <alice@student.42.fr>                +#+  +:+       +#+        */
+/*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:38:39 by alice             #+#    #+#             */
-/*   Updated: 2023/01/08 16:57:23 by alice            ###   ########.fr       */
+/*   Updated: 2023/01/09 12:35:48 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-/*Questa è la dichiarazione di una classe chiamata Fixed che rappresenta 
-un numero a virgola fissa. Un numero a virgola fissa è una rappresentazione 
+/*Un numero a virgola fissa è una rappresentazione 
 numerica in cui è fisso il numero di cifre dopo la virgola. 
 Ciò può essere utile per rappresentare valori frazionari quando l'intervallo di
 valori possibili è limitato e la precisione richiesta non è troppo elevata.*/
