@@ -71,7 +71,9 @@
         "mutex": "cpp",
         "optional": "cpp",
         "ratio": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "__functional_03": "cpp",
+        "filesystem": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
