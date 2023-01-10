@@ -1,8 +1,8 @@
-NAME    =   ScavTrap
+NAME    =   DiamondTrap
 SRC     =   $(wildcard *.cpp)
 OBJ     =   $(SRC:%.cpp = %.o)
 CC      =   c++
-FLAGS   =   -Wall -Wextra -Werror -std=c++98 -g
+FLAGS   =   -Wall -Wextra -Werror -std=c++98 -g -Wshadow -Wno-shadow
 RM      =   rm -rf
 all: $(NAME)
 RESET       =   "\033[0m"
@@ -25,7 +25,7 @@ BOLDWHITE   =   "\033[1m\033[37m"
 $(NAME): $(OBJ)
 		@echo "\033[1m\033[37mCompilation...\033[37m"
 		@$(CC) $(FLAGS) -o $(NAME) $(OBJ)
-		@echo "\033[1m\033[32mReady ---> CPP 03 - ex01\033[37m"
+		@echo "\033[1m\033[32mReady ---> CPP 03 - ex03\033[37m"
 fclean: clean
 	@printf "removing program executable $(NAME)\n\033[0;37m"
 	$(RM) $(NAME)

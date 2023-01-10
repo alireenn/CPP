@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 17:09:33 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/09 18:00:27 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/10 10:00:21 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _Hit_points(10), _Energy_poi
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap Destructor called" << std::endl;
+    std::cout << "ClapTrap Decostructor called" << std::endl;
     return;
 }
 /*operatore di assegnazione della classe ClapTrap. Viene richiamato quando a un oggetto della classe

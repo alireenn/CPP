@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/09 13:28:25 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 13:17:46 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/09 17:09:33 by anovelli          #+#    #+#             */
+/*   Updated: 2023/01/10 11:42:27 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap() : _name("alireenn"), _Hit_points(10), _Energy_points(10), _Attack_damage(0)
 {
-    std::cout << "Defautl constructor called" << std::endl;
+    std::cout << "ClapTrap Defautl constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _Hit_points(10), _Energy_points(10), _Attack_damage(0)
@@ -24,7 +24,7 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _Hit_points(10), _Energy_poi
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << MAGENTA "ClapTrap Decostructor called" RESET << std::endl;
     return;
 }
 /*operatore di assegnazione della classe ClapTrap. Viene richiamato quando a un oggetto della classe
@@ -91,3 +91,12 @@ void ClapTrap::attack(const std::string &target)
     _Energy_points--;
 }
 
+int ClapTrap::get_AD(void)
+{
+    return (this->_Attack_damage);
+}
+
+std::string ClapTrap::get_Name()
+{
+    return std::string(this->_name);
+}

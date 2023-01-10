@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 17:11:00 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 10:51:17 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/10 11:13:53 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,16 @@ pubblici e protetti di ClapTrap. Potrai anche aggiungere nuovi membri
 o ridefinire i membri ereditati nella classe derivata.*/
 class ScavTrap : public ClapTrap
 {
-    private:
-
     public:
-        ScavTrap();
-        ScavTrap(std::string name);
-        ScavTrap(const ScavTrap &rhs);
-        ~ScavTrap();
+    ScavTrap();
+    ScavTrap(std::string name);
+	ScavTrap(const ScavTrap &rhs);
+    ~ScavTrap();
     
     void attack(const std::string& target);
     void guardGate();
 };
+
 
 
 #endif
