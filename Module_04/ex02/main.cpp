@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:11:31 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:33:46 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:24:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,10 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
-int main( void )
+int	main()
 {
-    //const Animal* j = new Dog();
-    const Animal* i = new Cat();
-
-
-    //delete j;//should not create a leak
-    delete i;
-
-    Dog basic;
-    {
-        Dog tmp = basic;
-    }
-    const Animal* animals[2] = { new Dog(), new Cat() };
-    for ( int i = 0; i < 2; i++ ) {
-        std::cout << animals[i]->getType()<< i << std::endl;
-        delete animals[i];
-    }
-
-    return 0;
+	Dog prova;
+	Cat prova2;
+	// Animal	prova3; // eliminate comment to prove that you can't instantiate Animal
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:53:46 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:15:51 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:48:21 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Animal &Animal::operator=(const Animal &rhs)
 	return *this;
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
     std::cout << BOLDCYAN  "Makesound Animal called" RESET << std::endl;
 }

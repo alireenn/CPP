@@ -6,9 +6,13 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:48:59 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:33:28 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:46:21 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include "Animal.hpp"
 class Dog : public Animal
@@ -19,7 +23,10 @@ class Dog : public Animal
         Dog();
         Dog(const Dog &rhs);
         Dog(std::string name);
-        Dog& operator=(const Dog& src);
+        Dog& operator=(const Dog &rhs);
         ~Dog();
-        virtual void makeSound();
+        void makeSound() const;
+        Brain *getBrain() const;
 };
+
+#endif

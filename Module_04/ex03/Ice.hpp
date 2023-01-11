@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 16:08:27 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/11 11:04:25 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/11 12:22:07 by anovelli          #+#    #+#             */
+/*   Updated: 2023/01/11 12:41:51 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef ICE_HPP
+#define ICE_HPP
 
-#include <iostream>
-#include "Animal.hpp"
 
-class Brain
+#include "AMateria.hpp"
+
+class Ice : public AMateria
 {
-    private:
-        std::string ideas[100];
+	private:
+		;
 
-    public:
-        Brain();
-        Brain(const Brain &rhs);
-        Brain& operator=(const Brain &rhs);
-        virtual ~Brain();
-
-        std::string *getIdeas();
-        void setIdeas(std::string idea);
-
+	protected:
+		std::string type;
+	
+	public:
+		Ice();
+		Ice(const Ice &ice);
+		~Ice();
 };
+
 
 #endif

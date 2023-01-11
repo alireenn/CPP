@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 16:23:00 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:01:36 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:16:14 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int main()
     const Animal* i = new Cat();
     const WrongAnimal* w = new WrongCat();
     const Cat cat;
+    const Dog doggy;
 
     const Animal X;
     const Animal Y(X);
@@ -38,7 +39,14 @@ int main()
     i->makeSound(); //will output the cat sound!
     w->makeSound();
     meta->makeSound();
-    
+    cat.getBrain()->setIdeas("gato");
+    cat.getBrain()->getIdeas();
+    doggy.getBrain()->setIdeas("dogo");
+    doggy.getBrain()->setIdeas("dogo1");
+    doggy.getBrain()->setIdeas("dogo2");
+    doggy.getBrain()->setIdeas("dogo3");
+    doggy.getBrain()->getIdeas();
+
     delete meta;
     delete j;
     delete i;

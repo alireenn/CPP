@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:07:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:00:00 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:08:43 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class Cat : public Animal
         Cat& operator=(const Cat &rhs);
         ~Cat();
         void makeSound() const;
+        Brain *getBrain() const;
 };

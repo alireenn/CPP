@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 14:44:05 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/11 11:48:59 by anovelli         ###   ########.fr       */
+/*   Created: 2023/01/11 12:12:35 by anovelli          #+#    #+#             */
+/*   Updated: 2023/01/11 12:42:29 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
 #include <string>
-#include "Brain.hpp"
-
 
 #define RESET       "\033[0m"
 #define BLACK       "\033[30m"
@@ -35,20 +33,30 @@
 #define BOLDMAGENTA "\033[1m\033[35m"
 #define BOLDCYAN    "\033[1m\033[36m"
 #define BOLDWHITE   "\033[1m\033[37m"
+#define LAMPRED "\033[5;31;40m"
+#define LAMPGREEN "\033[5;36;40m"
+#define LAMPYELLOW "\033[5;36;40m"
+#define LAMPBLUE "\033[5;36;40m"
+#define LAMPMAGENTA "\033[5;36;40m"
+#define LAMPCYAN "\033[5;36;40m"
+#define LAMPWHITE "\033[5;36;40m"
 
-
-class Animal
+class AMateria
 {
-    protected:
-        std::string type;
-    public:
-        Animal();
-        Animal(std::string name);
-        Animal(const Animal &rhs);
-        virtual ~Animal();
-        Animal& operator=(const Animal &rhs);
-        virtual void makeSound() const = 0; // per rendere la classe astratta e quindi non istanziabile
-        std::string getType() const ;
+
+        protected: 
+                std::string type;
+        public:
+                AMateria();
+                ~AMateria();
+                AMateria(const AMateria &rhs); //costruttore di copie
+                AMateria(std::string const &type);
+                AMateria& operator=(const AMateria &rhs);
+
+                std::string const &getType() const; //Returns the materia type
+                virtual AMateria* clone() const = 0;
+                virtual void use(ICharacter& target);
 };
+
 
 #endif

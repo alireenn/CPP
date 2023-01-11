@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:09:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:32:25 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:19:55 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,25 @@ Cat::Cat(const Cat &rhs)
 
 Cat::~Cat()
 {
-    delete this->brain;
+    delete brain;
     std::cout <<  RED "Destructor for Brain Cat called." RESET << std::endl;
     std::cout <<  RED "Destructor for Cat called." RESET << std::endl;
 }
 
-void Cat::makeSound()
+void Cat::makeSound() const
 {
-    std::cout << BOLDCYAN "Wrong Meow!" RESET << std::endl;
+    std::cout << BOLDCYAN "Meow!" RESET << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &rhs)
 {
-    std::cout << "Cat copy called." << std::endl;
-    if (this != &rhs)
-    {
-        this->type = rhs.type;
-        this->brain = new Brain( *rhs.brain );
-    }
-    return *this;
+	if(this != &rhs)
+		this->type = rhs.type;
+	return *this;
+}
+
+Brain *Cat::getBrain() const
+{
+    return this->brain;
 }
 

@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:09:03 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 17:59:43 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:09:03 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-    std::cout << BOLDCYAN "Wrong Meow!" RESET << std::endl;
+    std::cout << BOLDCYAN "Meow!" RESET << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &rhs)
@@ -49,5 +49,10 @@ Cat &Cat::operator=(const Cat &rhs)
 	if(this != &rhs)
 		this->type = rhs.type;
 	return *this;
+}
+
+Brain *Cat::getBrain() const
+{
+    return this->brain;
 }
 

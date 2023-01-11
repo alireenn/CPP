@@ -6,9 +6,12 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:07:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:16:09 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:46:01 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include "Animal.hpp"
 #include "Brain.hpp"
@@ -23,5 +26,8 @@ class Cat : public Animal
         Cat(const Cat &rhs);
         Cat& operator=(const Cat &rhs);
         ~Cat();
-        virtual void makeSound();
+        void makeSound() const;
+        Brain *getBrain() const;
 };
+
+#endif

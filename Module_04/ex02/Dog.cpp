@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:03:22 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 18:33:14 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:27:39 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,23 +34,25 @@ Dog::Dog(const Dog &rhs)
 
 Dog::~Dog()
 {
-    delete this->brain;
+    delete brain;
     std::cout <<  RED "Destructor for Brain Dog called." RESET << std::endl;
     std::cout <<  RED "Destructor for Dog called." RESET << std::endl;
 }
 
-Dog& Dog::operator=( const Dog& src )
-{
-    std::cout << "Dog copy called." << std::endl;
-    if (this != &src)
-    {
-        this->type = src.type;
-        this->brain = new Brain( *src.brain );
-    }
-    return *this;
-}
-
-void Dog::makeSound()
+void Dog::makeSound() const
 {
     std::cout << BOLDCYAN  "Woof!" RESET << std::endl;
 }
+
+Dog &Dog::operator=(const Dog &rhs)
+{
+	if(this != &rhs)
+		this->type = rhs.type;
+	return *this;
+}
+
+Brain *Dog::getBrain() const
+{
+    return this->brain;
+}
+

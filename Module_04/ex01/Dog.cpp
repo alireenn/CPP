@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 15:03:22 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/10 16:50:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 11:14:18 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,3 +43,16 @@ void Dog::makeSound() const
 {
     std::cout << BOLDCYAN  "Woof!" RESET << std::endl;
 }
+
+Dog &Dog::operator=(const Dog &rhs)
+{
+	if(this != &rhs)
+		this->type = rhs.type;
+	return *this;
+}
+
+Brain *Dog::getBrain() const
+{
+    return this->brain;
+}
+
