@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:12:35 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/11 12:42:29 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 15:59:17 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include "ICharacter.hpp"
 
 #define RESET       "\033[0m"
 #define BLACK       "\033[30m"
@@ -41,6 +42,8 @@
 #define LAMPCYAN "\033[5;36;40m"
 #define LAMPWHITE "\033[5;36;40m"
 
+class ICharacter;
+
 class AMateria
 {
 
@@ -48,7 +51,7 @@ class AMateria
                 std::string type;
         public:
                 AMateria();
-                ~AMateria();
+                virtual ~AMateria();
                 AMateria(const AMateria &rhs); //costruttore di copie
                 AMateria(std::string const &type);
                 AMateria& operator=(const AMateria &rhs);

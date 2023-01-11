@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 12:24:01 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/11 12:43:08 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/11 17:11:52 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ AMateria::AMateria(const AMateria &rhs)
 
 AMateria::~AMateria()
 {
+    std::cout << BOLDRED "AMateria" RESET << RED " has been destroyed" RESET << std::endl; 
 }
 
 AMateria &AMateria::operator=(const AMateria &rhs)
@@ -47,5 +48,12 @@ std::string const &AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
-
+    if (this->type == "ice")
+        std::cout << CYAN " shoot an ice bolt at  " RESET << BOLDCYAN << target.getName() << RESET << std::endl;
+    else if (this->type == "cure")
+        std::cout << BLUE "  heals " RESET  << BOLDBLUE << target.getName() << RESET << BLUE "`s wounds *" RESET << std::endl;
+    else
+        std::cout << "Prrrrrrr!!!!!!!!!!!!!!!" << std::endl;
 }
+
+
