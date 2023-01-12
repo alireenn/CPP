@@ -1,4 +1,4 @@
-NAME    =   Form
+NAME    =   Robotomized
 SRC     =   $(wildcard *.cpp)
 OBJ     =   $(SRC:%.cpp = %.o)
 CC      =   c++

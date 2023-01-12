@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:02:35 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 16:06:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:07:10 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include "Bureaucrat.hpp"
 #include <exception>
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
 #include <string>
 
 #define RESET       "\033[0m"
@@ -36,6 +38,8 @@
 #define BOLDMAGENTA "\033[1m\033[35m"
 #define BOLDCYAN    "\033[1m\033[36m"
 #define BOLDWHITE   "\033[1m\033[37m"
+
+class Bureaucrat;
 
 class Form
 {
@@ -57,28 +61,14 @@ class Form
         int                 getGradeSign() const;
         void                beSigned(const Bureaucrat& bur);
 		bool				isSigned() const;
-
+	 	virtual void        execute(const Bureaucrat& executor) const = 0;
 
 /*
-            EXCEPTION
- */
-	class GradeTooHighException: public std::exception
-	{
-		public:
-			virtual const char* what() const throw() //vado a sovrascrivere la funzione what quando trovo throw
-			{ 
-				return "Grade Too High";
-			}
-	};
+            EXCEPTION vado a sovrascrivere la funzione what quando trovo throw
+*/
+	class GradeTooHighException: public std::exception { public: virtual const char* what() const throw() { return "Grade Too High"; }};
 
-	class GradeTooLowException: public std::exception
-	{
-		public:
-			virtual const char* what() const throw() 
-			{ 
-				return "Grade Too Low";
-			}
-	};
+	class GradeTooLowException: public std::exception { public: virtual const char* what() const throw() { return "Grade Too Low"; }};
 };
 
 std::ostream & operator<<(std::ostream &ost, Form const & i);

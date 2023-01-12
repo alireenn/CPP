@@ -65,17 +65,3 @@ std::ostream & operator<<(std::ostream &ost, Bureaucrat const & i)
 	ost << i.getName() << ", bureaucrat grade " << i.getGrade();
 	return ost;
 }
-
-void Form::SigneForm(const Bureaucrat &bur)
-{
-    Bureaucrat::GradeTooHighException a;
-    try
-    {
-        beSigned(bur);
-        std::cout << YELLOW << bur.getName() << " signed " << this->_name << " form." << RESET << std::endl;
-        return ;
-    }
-    catch (Bureaucrat::GradeTooHighException &a){}
-    catch (Bureaucrat::GradeTooLowException &a){}
-    std::cout << YELLOW << bur.getName() << " can't sign " << this->_name << " form because" << a.what() << RESET << std::endl;
-}

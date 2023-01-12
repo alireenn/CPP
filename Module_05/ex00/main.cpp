@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 11:13:35 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 11:46:16 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 14:14:28 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 
 		bur.incrementGrade();
 	}
-    catch (Bureaucrat::GradeTooHigh &b)
+    catch (Bureaucrat::GradeTooHighException &b)
     {
 		std::cout << b.what() << std::endl;
     }
@@ -33,7 +33,7 @@ int main()
 
 		bur.incrementGrade();
 	}
-    catch (Bureaucrat::GradeTooHigh &a)
+    catch (Bureaucrat::GradeTooHighException &a)
     {
 		std::cout << a.what() << std::endl;
     }
@@ -44,7 +44,7 @@ int main()
         std::cout << burry << std::endl;
 		burry.decrementGrade();
     }
-    catch (Bureaucrat::GradeTooLow &c)
+    catch (Bureaucrat::GradeTooLowException &c)
     {
 		std::cout << c.what() << std::endl;
     }

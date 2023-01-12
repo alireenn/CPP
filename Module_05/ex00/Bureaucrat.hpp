@@ -6,12 +6,12 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 10:30:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 11:44:54 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 12:11:09 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREUCRAT_HPP
-#define BUREUCRAT_HPP
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include <exception>
 #include <iostream>
@@ -55,7 +55,7 @@ class Bureaucrat
  /*
             EXCEPTION
  */
-	class GradeTooHigh: public std::exception
+	class GradeTooHighException: public std::exception
 	{
 		public:
 			virtual const char* what() const throw() //vado a sovrascrivere la funzione what quando trovo throw
@@ -64,7 +64,7 @@ class Bureaucrat
 			}
 	};
 
-	class GradeTooLow: public std::exception
+	class GradeTooLowException: public std::exception
 	{
 		public:
 			virtual const char* what() const throw() 

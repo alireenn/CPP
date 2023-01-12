@@ -8,9 +8,9 @@ Bureaucrat::Bureaucrat()
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 {
     if (grade < 1)
-		throw Bureaucrat::GradeTooHigh();
+		throw Bureaucrat::GradeTooHighException();
 	if (grade > 150)
-		throw Bureaucrat::GradeTooLow();
+		throw Bureaucrat::GradeTooLowException();
     std::cout << GREEN "Bureaucrat " << BOLDGREEN << name << RESET << GREEN " born!" RESET << std::endl;
 }
 
@@ -46,7 +46,7 @@ int Bureaucrat::getGrade() const
 void Bureaucrat::incrementGrade()
 {
     if (this->_grade - 1 < 1)
-		throw Bureaucrat::GradeTooHigh();
+		throw Bureaucrat::GradeTooHighException();
     std::cout << CYAN << this->getName() << " Incremented his grade from " << this->getGrade() - 1 << " to " << this->getGrade() << RESET << std::endl;
 	this->_grade--;
 }
@@ -54,7 +54,7 @@ void Bureaucrat::incrementGrade()
 void Bureaucrat::decrementGrade()
 {
     if (this->_grade + 1 > 150)
-		throw Bureaucrat::GradeTooLow();
+		throw Bureaucrat::GradeTooLowException();
     std::cout << BLUE << this->getName() << " Decremented his gradefrom " << this->getGrade() + 1 << " to " << this->getGrade() << RESET << std::endl;
 	this->_grade++;
 
@@ -64,4 +64,8 @@ std::ostream & operator<<(std::ostream &ost, Bureaucrat const & i)
 {
 	ost << i.getName() << ", bureaucrat grade " << i.getGrade();
 	return ost;
+}
+
+void Bureaucrat::executeForm(const Form &form) const
+{
 }
