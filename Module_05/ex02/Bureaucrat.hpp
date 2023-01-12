@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 10:30:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 16:07:16 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:34:19 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ class Bureaucrat
     void                incrementGrade();
     void                decrementGrade();
 	void 		        executeForm(const Form& form) const;
-    void                SigneForm(const Bureaucrat &bur);
+    void                SignForm(Form &form);
 
 
  /*

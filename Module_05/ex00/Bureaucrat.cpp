@@ -66,6 +66,3 @@ std::ostream & operator<<(std::ostream &ost, Bureaucrat const & i)
 	return ost;
 }
 
-void Bureaucrat::executeForm(const Form &form) const
-{
-}

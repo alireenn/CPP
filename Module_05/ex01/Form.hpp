@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 12:02:35 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 16:06:02 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:44:51 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@
 #define BOLDMAGENTA "\033[1m\033[35m"
 #define BOLDCYAN    "\033[1m\033[36m"
 #define BOLDWHITE   "\033[1m\033[37m"
+
+class Bureaucrat;
 
 class Form
 {

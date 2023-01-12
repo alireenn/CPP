@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:07:56 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 16:06:38 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 17:04:22 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ Form::Form() : _name("name"), _signed(0), _gradeToSign(50), _gradeToExecute(50)
 {
 }
 
-Form::Form(std::string name, int const gradeToSign, int const gradeToExecute) : _name(name), _signed(0), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+Form::Form(std::string name, int const gradeToSign, int const gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
-
 }
 
 Form::Form(const Form &rhs) : _gradeToSign(rhs._gradeToSign), _gradeToExecute(rhs._gradeToExecute)
@@ -42,12 +41,9 @@ Form &Form::operator=(const Form &rhs)
 
 void Form::beSigned(const Bureaucrat &bur)
 {
-    if (bur.getGrade() < 1)
-        throw Form::GradeTooHighException();
-	if (bur.getGrade() > 150)
+	if (bur.getGrade() > _gradeToSign)
 		throw Form::GradeTooLowException();
-    if (bur.getGrade() <= this->_gradeToSign)
-        _signed = 1;
+	_signed = true;
 }
 
 std::string Form::get_name() const
@@ -81,3 +77,5 @@ std::ostream & operator<<(std::ostream &ost, Form const & i)
 	ost << "----------------------------------------" << std::endl;
 	return ost;
 }
+
+

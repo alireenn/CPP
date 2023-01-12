@@ -6,7 +6,7 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 10:30:29 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/12 16:06:15 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/12 16:50:35 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <exception>
 #include <iostream>
 #include <string>
+#include "Form.hpp"
 
 #define RESET       "\033[0m"
 #define BLACK       "\033[30m"
@@ -35,6 +36,8 @@
 #define BOLDCYAN    "\033[1m\033[36m"
 #define BOLDWHITE   "\033[1m\033[37m"
 
+class Form;
+
 class Bureaucrat
 {
     private:
@@ -52,7 +55,7 @@ class Bureaucrat
     int                 getGrade() const;
     void                incrementGrade();
     void                decrementGrade();
-    void                SigneForm(const Bureaucrat &bur);
+	void 				signForm(Form &form);
  /*
             EXCEPTION
  */
