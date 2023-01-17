@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.hpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 15:07:39 by anovelli          #+#    #+#             */
-/*   Updated: 2023/01/16 16:12:26 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/01/17 13:39:23 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,13 @@ class Span
 	/*add a single number
 	to the Span. It will be used in order to fill it. Any attempt to add a new element if there
 	are already N elements stored should throw an exception*/
-		void	addNumber(int n);
-		void	addNumber(int n);
-		int		shortestSpan();
+		void						addNumber(int n);
+		void						addIter(const std::list<int>::iterator &start, const std::list<int>::iterator &end);
+		int							shortestSpan();
+		int 						longestSpan();
+		const std::list< int >*		getList( void ) const;
 
 };
-
+std::ostream& operator<<( std::ostream&, const Span& );
 
 #endif
