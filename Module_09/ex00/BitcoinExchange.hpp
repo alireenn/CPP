@@ -6,13 +6,14 @@
 /*   By: anovelli <anovelli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 13:59:19 by anovelli          #+#    #+#             */
-/*   Updated: 2023/03/14 14:17:24 by anovelli         ###   ########.fr       */
+/*   Updated: 2023/03/14 14:37:33 by anovelli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <map>
 #include <string>
+#include <fstream>
 
 class BitcoinExchange
 {
@@ -22,7 +23,8 @@ class BitcoinExchange
 		BitcoinExchange(std::string PathFile);
 		~BitcoinExchange();
 
-		void ParseMap(std::string FilePath);
-		
-		void PrintMap(std::map<std::string, std::string> data);
+		static std::string  getFile(std::string path);
+		void				ParseMap(std::string FilePath);
+		float				calculateOutput(std::string data);
+		void				PrintMap(std::map<std::string, std::string> data);
 };
