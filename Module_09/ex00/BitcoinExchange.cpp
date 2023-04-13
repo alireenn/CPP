@@ -1,8 +1,16 @@
 #include "BitcoinExchange.hpp"
 
+BitcoinExchange::BitcoinExchange()
+{
+}
+
 BitcoinExchange::BitcoinExchange(std::string PathFile)
 {
 	ParseMap(PathFile);
+}
+
+BitcoinExchange::BitcoinExchange(const BitcoinExchange &btc)
+{
 }
 
 BitcoinExchange::~BitcoinExchange()

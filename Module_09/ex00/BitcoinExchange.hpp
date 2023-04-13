@@ -10,21 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include <algorithm>
 #include <map>
-#include <string>
+#include <list>
+#include <iostream>
+#include <iomanip>
+#include <cstring>
 #include <fstream>
+#include <cmath>
 
 class BitcoinExchange
 {
-	private:
-		std::map<std::string, std::string> _data;
-	public:
-		BitcoinExchange(std::string PathFile);
-		~BitcoinExchange();
+private:
+	std::map<std::string, std::string> _data;
 
-		static std::string  getFile(std::string path);
-		void				ParseMap(std::string FilePath);
-		float				calculateOutput(std::string data);
-		void				PrintMap(std::map<std::string, std::string> data);
+public:
+	BitcoinExchange();
+	BitcoinExchange(std::string PathFile);
+	BitcoinExchange(const BitcoinExchange &btc);
+	~BitcoinExchange();
+
+	BitcoinExchange	&operator=(const BitcoinExchange &btc);
+
+	std::map<std::string, std::string>	getMap();
+	int									doExchange(char *path);
+	void								parseMap(std::string path);
+
 };
