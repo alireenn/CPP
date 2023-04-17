@@ -1,7 +1,7 @@
 NAME    =   btc
 SRC     =   $(wildcard *.cpp)
 OBJ     =   $(SRC:%.cpp = %.o)
-CC      =   c++
+CC      =   g++
 FLAGS   =   -Wall -Wextra -Werror -std=c++98
 RM      =   rm -rf
 all: $(NAME)
